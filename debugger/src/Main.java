@@ -34,8 +34,7 @@ public class Main {
         string.chars()
                 .map(operand -> Character.isLowerCase(operand) ? Character.toUpperCase(operand)
                         : Character.toLowerCase(operand))
-                .mapToObj(Character::toChars)
-                .forEach(builder::append);
+                .forEach(codePoint -> builder.append((char)codePoint));
         return builder.toString();
     }
 
